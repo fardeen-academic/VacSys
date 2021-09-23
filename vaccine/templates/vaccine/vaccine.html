@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+{% block content %}
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+    <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+      <h1 class="title-font font-medium text-6xl text-gray-900">Sign up for Vaccine</h1>
+      <p class="leading-relaxed mt-4 text-xl">Sign up as soon as possible for the Covid-19 vaccine to be safe.</p>
+    </div>
+    <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+        <form method="post">
+            {% csrf_token %}
+      <h2 class="text-gray-900 text-lg font-medium title-font mb-5 text-center text-xl">Register for Vaccine</h2>
+      <div class="relative mb-4">
+        <label for="full-name" class="leading-7 text-sm text-gray-600">NID</label>
+        <input type="number" name="nid" id="id_nid" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+        <div class="relative mb-4">
+        <label for="full-name" class="leading-7 text-sm text-gray-600">First Name</label>
+        <input type="text" id="id_first_name" name="first_name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+        <div class="relative mb-4">
+        <label for="full-name" class="leading-7 text-sm text-gray-600">Last Name</label>
+        <input type="text" id="id_last_name" name="last_name"  class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+        <div class="relative mb-4">
+        <label for="full-name" class="leading-7 text-sm text-gray-600">Date of Birth</label>
+        <input type="text" name="birth_date" id="id_birth_date" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+        <div class="relative mb-4">
+        <label for="full-name" class="leading-7 text-sm text-gray-600">Mobile Number</label>
+        <input type="text" name="phone" id="id_phone" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Register</button>
+      <p class="text-xs text-gray-500 mt-3">Every Person is allowed to register only once.</p>
+        </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
